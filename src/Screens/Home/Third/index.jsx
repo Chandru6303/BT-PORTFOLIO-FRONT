@@ -4,7 +4,7 @@ import "./Third.scss"
 
 const Third = (props) =>{
     const colleges = props.data.TrainedCollege;
-    console.log(colleges);
+    // console.log(colleges);
     // console.log(colleges[2].img1.filename);
     
     const datas = [

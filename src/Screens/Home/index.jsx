@@ -34,7 +34,7 @@ const Home = () => {
         });
     }, []);
 
-    console.log(homePageData?.body[1]);
+    // console.log(homePageData?.body[3].Linkedin);
     
     return (
         <div className="Home">
@@ -52,8 +52,18 @@ const Home = () => {
             ) : (
                 <div>Loading...</div>
             )}
-            <Fourth />
-            <Fifth />
+            {!loading && homePageData ? (
+                <Fourth data={homePageData?.body[2]} />
+                
+            ) : (
+                <div>Loading...</div>
+            )}
+            {!loading && homePageData ? (
+                <Fifth data={homePageData?.body[3]} />
+                
+            ) : (
+                <div>Loading...</div>
+            )}
             <Footer />
         </div>
     );

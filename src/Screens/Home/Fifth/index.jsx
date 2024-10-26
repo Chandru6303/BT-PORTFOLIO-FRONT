@@ -21,19 +21,22 @@ import {
   Linkedin10,
 } from "../../../Assets";
 
-const Fifth = () => {
-  const imgs = [
-    Linkedin2,
-    Linkedin9,
-    Linkedin1,
-    Linkedin6,
-    Linkedin7,
-    Linkedin8,
-    Linkedin10,
-    Linkedin3,
-    Linkedin4,
-    Linkedin5,
-  ];
+const Fifth = (props) => {
+  const imgs = props.data.Linkedin
+  console.log(imgs);
+  
+  // const imgs = [
+  //   Linkedin2,
+  //   Linkedin9,
+  //   Linkedin1,
+  //   Linkedin6,
+  //   Linkedin7,
+  //   Linkedin8,
+  //   Linkedin10,
+  //   Linkedin3,
+  //   Linkedin4,
+  //   Linkedin5,
+  // ];
 
   const numberOfComponents = 10; // Change this to the desired number of repetitions
   const logoArray1 = [
@@ -79,37 +82,29 @@ const Fifth = () => {
           Our Commitment Towards Mentorship <br /> Makes Us Unique
         </h1>
         <div className="card_contain">
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            showArrows={true}
-            infiniteLoop={true}
-            useKeyboardArrows
-            autoPlay
-            interval={4000}
-            transitionTime={500}
-          >
-            <div className="carousel-slide">
-              <img src={imgs[0]} />
-              <img src={imgs[1]}/>
-            </div>
-            <div className="carousel-slide">
-              <img src={imgs[2]} />
-              <img src={imgs[3]}/>
-            </div>
-            <div className="carousel-slide">
-              <img src={imgs[4]} />
-              <img src={imgs[5]}/>
-            </div>
-            <div className="carousel-slide">
-              <img src={imgs[6]} />
-              <img src={imgs[7]}/>
-            </div>
-            <div className="carousel-slide">
-              <img src={imgs[8]} />
-              <img src={imgs[9]}/>
-            </div>
-          </Carousel>
+        <Carousel
+        showThumbs={false}
+        showStatus={false}
+        showArrows={true}
+        infiniteLoop={true}
+        useKeyboardArrows
+        autoPlay
+        interval={4000}
+        transitionTime={500}
+      >
+        {(() => {
+          const slides = [];
+          for (let i = 0; i < imgs.length; i += 2) {
+            slides.push(
+              <div className="carousel-slide" key={i}>
+                <img src={imgs[i].Carousel1.filename} alt={`Slide ${i}`} />
+                {imgs[i + 1] && <img src={imgs[i + 1].Carousel1.filename} alt={`Slide ${i + 1}`} />}
+              </div>
+            );
+          }
+          return slides;
+        })()}
+      </Carousel>
         </div>
       </div>
       <div className="Pathways">
