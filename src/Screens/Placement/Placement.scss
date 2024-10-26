@@ -1,0 +1,256 @@
+.Placement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #eff2f7;
+  width: 100vw;
+}
+
+.Placement .Head_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.Placement .Head_wrap .Header {
+  width: 100%;
+  margin: 0;
+}
+
+.Placement_banner {
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Placement_banner .banner_left {
+  width: 40vw;
+}
+
+.Placement_banner .banner_left h1 {
+  font-family: Poppins;
+  font-size: clamp(20px, 2.3vw, 2.5vw);
+  font-weight: 700;
+  line-height: clamp(35px, 4vw, 5vw);
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 100px;
+  color: black;
+}
+
+.Placement_banner .banner_right {
+  width: 60vw;
+  height: 100%;
+  position: relative;
+}
+
+.Placement_banner .banner_right .bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(120px, 10vw, 15vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  animation: bounce 2s infinite linear;
+  border: 1px solid #053859;
+  background: radial-gradient(circle at 75% 30%, white 5px);
+  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px transparent,
+    inset 88px 0px 60px transparent, inset -20px -60px 100px transparent,
+    inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+.Placement_banner .banner_right .bubble p {
+  font-size: clamp(12px, 1vw, 3vw);
+}
+
+.Placement_banner .banner_right .bubble p span {
+  font-size: clamp(20px, 1.8vw, 2vw);
+  font-weight: 900;
+}
+
+.Placement_banner .banner_right .first {
+  position: absolute;
+  top: 10vh;
+  left: 5%;
+}
+
+.Placement_banner .banner_right .sec {
+  position: absolute;
+  top: 15vh;
+  left: 45%;
+}
+
+.Placement_banner .banner_right .third {
+  position: absolute;
+  top: 40vh;
+  left: 60%;
+}
+
+.Placement_banner .banner_right .four {
+  position: absolute;
+  top: 35vh;
+  left: 15%;
+}
+
+.Placement h1 {
+  font-family: Poppins;
+  font-size: clamp(25px, 2vw, 2vw);
+  font-weight: 600;
+  line-height: clamp(30px, 3vw, 3.5vw);
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 20px;
+}
+
+.Placement img {
+  height: auto;
+  width: 80%;
+}
+
+.Placement p {
+  font-size: clamp(13px, 1.2vw, 2vw);
+  width: 80%;
+  text-align: center;
+  align-self: center;
+}
+
+.Placement .PlaceCard_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Placement .training {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 50px 0;
+  gap: 50px;
+}
+
+.Placement .training .training_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 370px;
+  min-height: 400px;
+  aspect-ratio: 3 / 2;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #053859;
+  color: black;
+  opacity: 0.8;
+  text-align: center;
+  font-size: clamp(15px, 1.1vw, 2.5vw);
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Placement {
+    height: auto;
+  }
+
+  .Placement_banner {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .Placement_banner .banner_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .Placement_banner .banner_left h1 {
+    font-size: clamp(30px, 2.5vw, 3vw);
+    line-height: clamp(40px, 3vw, 3vw);
+    margin-left: 30px;
+    opacity: 0.8;
+  }
+
+  .Placement_banner .banner_right {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .Placement .training {
+    border-radius: 3px;
+    display: grid;
+    padding: 50px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Placement {
+    padding: 20px;
+  }
+
+  .Placement_banner {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .Placement_banner .banner_left {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .Placement_banner .banner_left h1 {
+    text-align: center;
+    font-size: clamp(25px, 7vw, 8vw);
+    line-height: clamp(35px, 8vw, 9vw);
+    margin-left: 0;
+  }
+
+  .Placement_banner .banner_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Placement .training {
+    margin-left: 35px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .Placement .training .training_box {
+    max-width: 90%;
+    min-height: 260px;
+  }
+  .Placement h1 {
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+}

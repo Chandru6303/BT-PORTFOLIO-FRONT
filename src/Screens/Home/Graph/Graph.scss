@@ -1,0 +1,18 @@
+.Graph{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .GraphPortion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: clamp(350px,40vw,45vw);
+        margin: 12px;
+        h1{
+            font-size: clamp(15px,1.5vw,2vw);
+            margin-bottom: 20px;
+        }
+    }
+}

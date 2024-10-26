@@ -1,0 +1,58 @@
+.Students{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .Students_body{
+        .content{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .text{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                h1{
+                    font-family: Poppins;
+                    font-size: clamp(30px,2.5vw,4vw);
+                    font-weight: 700;
+                    line-height: clamp(40px,3.2vw,4vw);
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #053859;
+                }
+                p{
+                    font-family: Poppins;
+                    font-size: clamp(10px,1.5vw,4vw);
+                    font-weight: 500;
+                    line-height: clamp(25px,2vw,3vw);
+                    letter-spacing: 0em;
+                    text-align: justified;
+                }
+                img{
+                    width: clamp(100px,20vw,25vw);
+                }
+            }
+            img{
+                width: clamp(300px,35vw,40vw);
+            }
+        }
+    }
+}
+
+@media  screen and (max-width:1000px) {
+    .Students{
+        .Students_body{
+            .content{
+                margin: 20px 0px;
+                .text{
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    flex-wrap: wrap-reverse;
+                }
+            }
+        }
+    }
+}

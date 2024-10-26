@@ -1,0 +1,166 @@
+.Fifth {
+  .Student {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(25px, 2.8vw, 5vw);
+      line-height: clamp(30px, 4vw, 4vw);
+      font-weight: 700;
+      text-align: center;
+      color: #053859;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .card_contain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 85vw;
+
+      .carousel-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        margin: 10px;
+
+        img {
+          margin: 10px 5px;
+          height: clamp(80px, 23vw, 40vw);
+          border-radius: 10px;
+          border: 2px solid #ddd;
+          padding: 30px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+    .Pathways {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      font-family: Poppins;
+      font-size: clamp(30px, 2.8vw, 5vw);
+      line-height: clamp(40px, 3.5vw, 4vw);
+      font-weight: 700;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #053859;
+      margin: 20px 0px;
+    }
+    .Success_contain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 40vh;
+      margin: 40px 0px;
+      marquee {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        // background-color: orange;
+        margin: 12px;
+        img {
+          background-color: white;
+          height: 125px;
+          width: 200px;
+          padding: 15px 20px;
+          border-radius: 12px;
+          box-shadow: 0px focus0px 5px black;
+          filter: grayscale(100%);
+        }
+      }
+      img {
+        width: clamp(100px, 14vw, 15vw);
+        margin: 12px;
+      }
+    }
+  }
+  .Placements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    h1 {
+      font-family: Poppins;
+      font-size: clamp(25px, 2.8vw, 5vw);
+      line-height: clamp(30px, 4vw, 4vw);
+      font-weight: 700;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #053859;
+      margin: 50px 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Fifth {
+    .Student {
+      h1 {
+        font-size: clamp(20px, 4vw, 6vw);
+      }
+
+      .card_contain {
+        width: 100vw;
+        padding: 0 10px;
+
+        .carousel-slide {
+          flex-direction: column;
+          padding: 10px;
+
+          img {
+            height: auto;
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    .Pathways {
+      h1 {
+        text-align: center;
+        font-size: clamp(20px, 4vw, 6vw);
+        margin: 20px 0;
+      }
+
+      .Success_contain {
+        flex-direction: column;
+        margin: 0px 0;
+
+        marquee {
+          flex-direction: row;
+          flex-wrap: wrap;
+          img {
+            margin: 10px;
+            width: 150px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    .Placements {
+      h1 {
+        font-size: clamp(20px, 4vw, 6vw);
+        margin: 20px 0;
+      }
+
+      .Graph {
+        width: 95vw;
+      }
+    }
+  }
+}
